@@ -198,7 +198,5 @@ grpcurl -d '{
        - grpcio
        - grpcio-tools
 
-## Screenshots
 
-![App Screenshot]()
 

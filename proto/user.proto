@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+option go_package = "/user";
+
+message Contact {
+    string home_addr = 1;
+    string mob_num = 2;
+    string mail_id = 3;
+}
+
+message User {
+    string id = 1;
+    string first_name = 2;
+    string last_name = 3;
+    string city = 4;
+    string phone = 5;
+    float height = 6;
+    bool married = 7;
+    Contact contact = 8;
+}
+
+message UserID {
+    string id = 1;
+}
+
+message UserIDs {
+    repeated string ids = 1;
+}
+
+message UserList {
+    repeated User users = 1;
+}
+
+message SearchCriteria {
+    string city = 1;
+    string phone = 2;
+    bool married = 3;
+}
+
+service UserService {
+    rpc GetUser(UserID) returns (User);
+    rpc ListUsers(google.protobuf.Empty) returns (UserList);
+    rpc SetUser(User) returns (UserID);
+    rpc UpdateUser(User) returns (google.protobuf.Empty);
+    rpc DeleteUser(UserID) returns (google.protobuf.Empty);
+    rpc SearchUsers(SearchCriteria) returns (UserList);
+    rpc GetUsersByID(UserIDs) returns (UserList);
+}

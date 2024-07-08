@@ -112,7 +112,7 @@ grpcurl -d '{"id": "1"}' -plaintext localhost:50051 UserService.GetUser
 
 ```sh
 grpcurl -d '{
-  "id": "14",
+  "id": "1",
   "first_name": "John",
   "last_name": "Doe",
   "city": "Patna",
@@ -198,7 +198,8 @@ grpcurl -d '{
        - grpcio
        - grpcio-tools
 
-## Download the recording video to see the application running
+## See the Attachments folder for the Screenshot and video fil
+
 
 
 

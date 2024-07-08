@@ -198,7 +198,7 @@ grpcurl -d '{
        - grpcio
        - grpcio-tools
 
-## See the Attachments folder for the Screenshot and video fil
+## See the Attachments folder for the Screenshot and video file
 
 
 

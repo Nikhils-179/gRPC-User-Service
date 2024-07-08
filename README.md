@@ -198,5 +198,7 @@ grpcurl -d '{
        - grpcio
        - grpcio-tools
 
+## Download the recording video to see the application running
+
 
 

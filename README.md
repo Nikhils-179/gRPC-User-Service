@@ -96,7 +96,7 @@ Use grpcurl to interact with the gRPC service. The following commands can be use
 - List all services
 
 ```sh
-grcpcurl -plaintext localhost:50051 list
+grpcurl -plaintext localhost:50051 list
 ```
 
 - List all methods in `UserService`
@@ -105,7 +105,7 @@ grpcurl -plaintext localhost:50051 list UserService
 ```
 - Call GetUser endpoint
 ```sh
-grpcurl -d '{"user_id": "123"}' -plaintext localhost:50051 UserService.GetUser
+grpcurl -d '{"id": "1"}' -plaintext localhost:50051 UserService.GetUser
 ```
 
 - Call SetUser endpoint
@@ -130,7 +130,7 @@ grpcurl -d '{
 
 ```sh 
 grpcurl -d '{
-  "id": "123",
+  "id": "1",
   "first_name": "John",
   "last_name": "Doe",
   "city": "Boston",
@@ -149,7 +149,7 @@ grpcurl -d '{
 - Call DeleteUser endpoint
 
 ```sh
-grpcurl -d '{"user_id": "123"}' -plaintext localhost:50051 UserService.DeleteUser
+grpcurl -d '{"id": "1"}' -plaintext localhost:50051 UserService.DeleteUser
 
 ```
 
@@ -165,7 +165,7 @@ grpcurl -d '{
 - Call GetUsersByID
 ```sh
 grpcurl -d '{
-  "user_ids": ["1", "2", "3"]
+  "ids": ["1", "2", "3"]
 }' -plaintext localhost:50051 UserService.GetUsersByID
 
 ```

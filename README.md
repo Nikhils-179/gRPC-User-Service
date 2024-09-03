@@ -49,6 +49,17 @@ Folder Structure :
             └── user_grpc.pb.go
 ```
 ## Build and Run the Application
+- Install Protocol Buffers Compiler (protoc)
+```sh
+go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+```
+
+- Update Your PATH
+```sh
+export PATH="$PATH:$(go env GOPATH)/bin"
+source ~./zshrc
+```
 
 -  Generate Protbuf files 
     Ensure you have 'protoc installed. From the root directory run : 
